@@ -1,0 +1,42 @@
+.menu {
+  display: flex;
+  list-style: none;
+
+  &__item {
+    position: relative;
+
+    &:hover .submenu,
+    &.focus .submenu {
+      transform: scaleY(1);
+    }
+  }
+
+  .menu__link {
+    display: inline-block;
+    position: relative;
+    color: #6505cc;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+}
+
+.submenu {
+  position: absolute;
+  margin-left: 0.5rem;
+  padding: 0;
+  width: 12rem;
+  list-style: none;
+  background: #6505cc;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+
+  a {
+    display: block;
+    padding: 0.5rem;
+    color: #eedbff;
+    text-decoration: none;
+  }
+}
